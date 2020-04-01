@@ -7,7 +7,6 @@ from numba import void,b1,u1,u2,u4,u8,i1,i2,i4,i8,f4,f8,c8,c16
 from numba.typed import List, Dict
 from numba.types import ListType, unicode_type
 import timeit
-from sklearn import tree as SKTree
 from numba.extending import overload
 
 class Operator(object):
@@ -129,3 +128,10 @@ print(cat_em(u,u))
 
 
 print("add_em",)
+
+@njit
+def whatever():
+	a = 5.0
+	print(np.str(a))
+
+whatever()
